@@ -7,11 +7,6 @@ import 'firebase/compat/firestore';
 import NavigationBar from './components/Navbar/Navbar.js';
 
 
-const divStyle = {
-  display: 'flex',
-  alignItems: 'center'
-};
-
 
 var firebaseConfig = {
   apiKey: "AIzaSyBgxs2tW6Lb0GaJtfSCdeQyVd--WrzSBRs",
@@ -28,7 +23,7 @@ const AnyReactComponent = ({ text, color }) => (
   <div style={{
     color: 'black', 
     background: color,
-    padding: '2px 2px',
+    padding: '40px 40px',
     display: 'inline-flex',
     textAlign: 'center',
     alignItems: 'center',
@@ -65,11 +60,20 @@ class SimpleMap extends React.Component {
   }
 }
 
-createRoot(document.getElementById('home')).render(<div style={{width: '600px', height: '600px'}}>
+createRoot(document.getElementById('home')).render(<div style={{
+  display: 'flex',
+  textAlign: 'center',
+  alignItems: 'center',
+  justifyContent: 'center',
+  borderRadius: '100%',
+  height: '100vh'}}>
 <SimpleMap/>
 </div>);
 
-createRoot(document.getElementById('bar')).render(<NavigationBar/>);
+createRoot(document.getElementById('bar')).render(<div style={{
+  textAlign: 'center',
+  alignItems: 'center',
+  justifyContent: 'center',}}><NavigationBar/></div>);
 
 
 const read = async() => {
@@ -85,10 +89,16 @@ read();
 
 
 
-const Text = () => 
+/*const Text = () => 
 {
     return <h1>Affordable Housing Forecaster</h1>;
 }
-createRoot(document.getElementById('text')).render(<Text />);
+createRoot(document.getElementById('text')).render(<div style={{
+  display: 'flex',
+  textAlign: 'center',
+  alignItems: 'center',
+  justifyContent: 'center',
+  borderRadius: '100%',
+}}><Text /></div>);*/
 
 
