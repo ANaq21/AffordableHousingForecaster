@@ -2,6 +2,11 @@ import ReactDOM from 'react-dom';
 import React from 'react'
 import GoogleMapReact from 'google-map-react';
 
+//import 'bootstrap/dist/css/bootstrap.min.css';
+//import Navbar from "./components/Navbar/Navbar.js";
+
+export default App;
+
 const AnyReactComponent = ({ text, color }) => (
   <div style={{
     color: 'black', 
@@ -59,6 +64,9 @@ ReactDOM.render(
 const App = () => 
 {
     return <h1>This is my app!</h1>;
+    <div>
+      <Navbar />
+    </div>;
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
