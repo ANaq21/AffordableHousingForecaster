@@ -17,6 +17,11 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 
+//import 'bootstrap/dist/css/bootstrap.min.css';
+//import Navbar from "./components/Navbar/Navbar.js";
+
+export default App;
+
 const AnyReactComponent = ({ text, color }) => (
   <div style={{
     color: 'black', 
