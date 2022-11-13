@@ -4,6 +4,13 @@ import GoogleMapReact from 'google-map-react';
 import {useState} from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
+import NavigationBar from './components/Navbar/Navbar.js';
+
+
+const divStyle = {
+  display: 'flex',
+  alignItems: 'center'
+};
 
 
 var firebaseConfig = {
@@ -16,11 +23,6 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
-
-//import 'bootstrap/dist/css/bootstrap.min.css';
-//import Navbar from "./components/Navbar/Navbar.js";
-
-export default App;
 
 const AnyReactComponent = ({ text, color }) => (
   <div style={{
@@ -66,6 +68,8 @@ class SimpleMap extends React.Component {
 createRoot(document.getElementById('home')).render(<div style={{width: '600px', height: '600px'}}>
 <SimpleMap/>
 </div>);
+
+createRoot(document.getElementById('bar')).render(<NavigationBar/>);
 
 
 const read = async() => {
